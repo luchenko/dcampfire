@@ -69,7 +69,18 @@ var path = d3.geo.path()               // path generator that will convert GeoJS
 		
 // Define linear scale for output
 var color = d3.scale.linear()
-			  .range(["rgb(213,222,217)","rgb(69,173,168)","rgb(84,36,55)","rgb(217,91,67)"]);
+			  .range(["rgb(255, 255, 255)",
+			  	      "rgb(229, 248, 255)",
+			  	      "rgb(204, 242, 255)",
+			  	      "rgb(178, 235, 255)",
+                      "rgb(153, 229, 255)",
+                      "rgb(127, 222, 255)",
+                      "rgb(102, 216, 255)",
+                      "rgb(76, 209, 255)",
+                      "rgb(51, 203, 255)",
+                      "rgb(25, 197, 255)",
+                      "rgb(0, 190, 255)"
+			  	      ]);
 
 var legendText = ["Cities Lived", "States Lived", "States Visited", "Nada"];
 
@@ -87,7 +98,7 @@ var div = d3.select("body")
 
 // Load in my states data!
 d3.csv("estados_cantidad.csv", function(data) {
-color.domain([0,1,2,3]); // setting the range of the input data
+color.domain([1,2,3,4,5,6,7,8,9,10]); // setting the range of the input data
 
 // Load GeoJSON data and merge with states data
 d3.json("us-states.json", function(json) {
